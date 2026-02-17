@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+    <!-- Твій відео-аддон -->
+    <addon id="plugin.video.myaddon"
+           name="My Movies & Shows"
+           version="1.0.0"
+           provider-name="YourName">
+        <requires>
+            <import addon="xbmc.python" version="3.0.0" />
+        </requires>
+        <extension point="xbmc.python.pluginsource" library="main.py">
+            <provides>video</provides>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary lang="en_GB">Simple movies & TV shows addon</summary>
+            <description lang="en_GB">
+                Simple example Kodi video plugin that lists movies and TV shows from URLs.
+            </description>
+            <platform>all</platform>
+        </extension>
+    </addon>
+
+    <!-- Аддон-репозиторій -->
+    <addon id="repository.myrepo"
+           name="My Kodi Repo"
+           version="1.0.0"
+           provider-name="YourName">
+        <extension point="xbmc.addon.repository"
+                   name="My Kodi Repo">
+            <info compressed="false">https://YOUR_USERNAME.github.io/repo/zips/addons.xml</info>
+            <checksum>https://YOUR_USERNAME.github.io/repo/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://YOUR_USERNAME.github.io/repo/zips/</datadir>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary lang="en_GB">My Kodi repository</summary>
+            <description lang="en_GB">
+                Repository containing my custom Kodi addons.
+            </description>
+            <platform>all</platform>
+        </extension>
+    </addon>
+</addons>
